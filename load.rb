@@ -5,42 +5,42 @@
 class Load < Formula
   desc "Styra Load is an enterprise-grade authorization engine built to provide resource-efficient performance for data-heavy workloads"
   homepage "https://www.styra.com/styra-load"
-  version "0.101.0"
+  version "0.101.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/load/releases/download/v0.101.0/load_Darwin_x86_64"
-      sha256 "fb05b48904db14b243f786995d22b59ce7d4a348c713c98f6e4b61c5f1b62c88"
-
-      def install
-        bin.install "load_Darwin_x86_64" => "load"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/StyraInc/load/releases/download/v0.101.0/load_Darwin_arm64"
-      sha256 "f3cc251d85724b5f2689e701fcc70d4d3035dc3468f607afc58b629bb7eefcc5"
+      url "https://github.com/StyraInc/load/releases/download/v0.101.1/load_Darwin_arm64"
+      sha256 "0a04c7cab57ab6496020307445732a2b8f02e2e6b0d9a1223e91455cad80a8f0"
 
       def install
         bin.install "load_Darwin_arm64" => "load"
       end
     end
+    if Hardware::CPU.intel?
+      url "https://github.com/StyraInc/load/releases/download/v0.101.1/load_Darwin_x86_64"
+      sha256 "153ebda40c49585ae4a9e049bd9f7ad55c0262145d5469112bcf39e41050df6b"
+
+      def install
+        bin.install "load_Darwin_x86_64" => "load"
+      end
+    end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StyraInc/load/releases/download/v0.101.0/load_Linux_arm64"
-      sha256 "4dcf94ddf1f9968f4f7bd7547bdbe511f578376261f644d6bcfd46c8644b1f7d"
-
-      def install
-        bin.install "load_Linux_arm64" => "load"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/load/releases/download/v0.101.0/load_Linux_x86_64"
-      sha256 "9c55cfaf389fac052173297025ac175280c5181d7c982acf285408df5dd30ceb"
+      url "https://github.com/StyraInc/load/releases/download/v0.101.1/load_Linux_x86_64"
+      sha256 "f96068352735bdec89afd12c9a86cb2eee29d10317a8783941413236771ef877"
 
       def install
         bin.install "load_Linux_x86_64" => "load"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/StyraInc/load/releases/download/v0.101.1/load_Linux_arm64"
+      sha256 "071be0a002a41d8ef73d1789a48dcfd83ca29619b2efb3ace0d28a158bdaf15a"
+
+      def install
+        bin.install "load_Linux_arm64" => "load"
       end
     end
   end
