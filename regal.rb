@@ -5,20 +5,20 @@
 class Regal < Formula
   desc "Regal is a linter for Rego, with the goal of making your Rego magnificent!"
   homepage "https://github.com/styrainc/regal"
-  version "0.1.0-beta1"
+  version "0.1.0-beta2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta1/regal_Darwin_x86_64"
-      sha256 "052f0fb28a51681ff96e4c190253988d66cf5587219755e2acbbb617a94daefb"
+      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta2/regal_Darwin_x86_64"
+      sha256 "838c1ef4d04c31a4ef2a3a29646c9c13a7d9b1ae1c704d4a5d6267cced40298d"
 
       def install
         bin.install "regal_Darwin_x86_64" => "regal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta1/regal_Darwin_arm64"
-      sha256 "90fa6e0204a6629b28343f6f50e0303f247801ab603ebf4e1a370f2210d94dc2"
+      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta2/regal_Darwin_arm64"
+      sha256 "6ada6af2248a3e2f8aced20c4acef8cde0781d0eaa7d8c38e492690e7386d12e"
 
       def install
         bin.install "regal_Darwin_arm64" => "regal"
@@ -27,20 +27,20 @@ class Regal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta1/regal_Linux_x86_64"
-      sha256 "a6e8b182759994714d4d44ee26d50a60fdff324c71bc609d4d906721058ba30b"
-
-      def install
-        bin.install "regal_Linux_x86_64" => "regal"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta1/regal_Linux_arm64"
-      sha256 "5d26fbc0af5c35450cd5ebcae6c8e85b442c665ee10a73459be2fb30db4748a0"
+      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta2/regal_Linux_arm64"
+      sha256 "3b81a4b4487166f48ca1ed06f9a5cacfd26148f5edb41769c8a97b3aba7e4e8c"
 
       def install
         bin.install "regal_Linux_arm64" => "regal"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/StyraInc/regal/releases/download/v0.1.0-beta2/regal_Linux_x86_64"
+      sha256 "633f8681f73956ab8df6894cc25fea7291dada4f4dbe7e82cfc7f35e0154e9d9"
+
+      def install
+        bin.install "regal_Linux_x86_64" => "regal"
       end
     end
   end
