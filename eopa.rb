@@ -5,20 +5,20 @@
 class Eopa < Formula
   desc "Styra Enterprise OPA is an enterprise-grade authorization engine built to provide resource-efficient performance for data-heavy workloads"
   homepage "https://www.styra.com/enterprise-opa"
-  version "1.9.5"
+  version "1.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.9.5/eopa_Darwin_x86_64"
-      sha256 "59ff7716b0953a84594c2e7cd251fb9dc64c5b4e5c75c7dba3e1faa13d331b9f"
+      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.10.0/eopa_Darwin_x86_64"
+      sha256 "112b11345e8d73d4e6c461848782cfbcec818e194d44989c06efbcdfdb697b2b"
 
       def install
         bin.install "eopa_Darwin_x86_64" => "eopa"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.9.5/eopa_Darwin_arm64"
-      sha256 "a191de35b60dd0b6963477194d54046049bf189ccfe55e4556c2c0212193f3b1"
+      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.10.0/eopa_Darwin_arm64"
+      sha256 "b68585ac1125fd076691a0f211153edcb062b9f65dae846d567dd11cf809bbfe"
 
       def install
         bin.install "eopa_Darwin_arm64" => "eopa"
@@ -28,16 +28,16 @@ class Eopa < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.9.5/eopa_Linux_x86_64"
-      sha256 "a37ece8839d8feab7d73fdc00cf4889b4741dcf36a622823edc3914501678162"
+      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.10.0/eopa_Linux_x86_64"
+      sha256 "3db90fb93ddee6c5747f49650cfd11810b88cfd6f0c5e2655c7905a0cbfc936a"
 
       def install
         bin.install "eopa_Linux_x86_64" => "eopa"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.9.5/eopa_Linux_arm64"
-      sha256 "59e9e1a276fc2fb200fded3035075ffdeddd6a5303ac73ef1c5c5cf67ab4ec0e"
+      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.10.0/eopa_Linux_arm64"
+      sha256 "912ed3760a8ed07bdc16650d591c4d6db8c10929ac768559d423cb79f2ea8538"
 
       def install
         bin.install "eopa_Linux_arm64" => "eopa"
