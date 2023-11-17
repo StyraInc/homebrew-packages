@@ -5,20 +5,20 @@
 class Regal < Formula
   desc "Regal is a linter for Rego, with the goal of making your Rego magnificent!"
   homepage "https://github.com/styrainc/regal"
-  version "0.12.0"
+  version "0.13.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/regal/releases/download/v0.12.0/regal_Darwin_x86_64"
-      sha256 "97425c8bd3c9941dcc5ecdbcec68658c312e80335530342ff176070a29727377"
+      url "https://github.com/StyraInc/regal/releases/download/v0.13.0/regal_Darwin_x86_64"
+      sha256 "a3e88cb0f3e604e35cd7fb82b203cf10b815b153ded1bd2aa0be02940ffdfcf6"
 
       def install
         bin.install "regal_Darwin_x86_64" => "regal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StyraInc/regal/releases/download/v0.12.0/regal_Darwin_arm64"
-      sha256 "f18a5f91d308561c29d87f225715060934d0acd3b47e06024063768ca56a9491"
+      url "https://github.com/StyraInc/regal/releases/download/v0.13.0/regal_Darwin_arm64"
+      sha256 "9c59f4f2c9638e102aa318109eef5465529f5e7faf147ca90581cc66ed2647c3"
 
       def install
         bin.install "regal_Darwin_arm64" => "regal"
@@ -27,20 +27,20 @@ class Regal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/regal/releases/download/v0.12.0/regal_Linux_x86_64"
-      sha256 "7d792689d1639d35a6fa8c2c0783a677a22dc65e0aecb7c8143f5322319144bb"
-
-      def install
-        bin.install "regal_Linux_x86_64" => "regal"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/StyraInc/regal/releases/download/v0.12.0/regal_Linux_arm64"
-      sha256 "c05839dd7fe8f5ea1395591ed25f736a3b57d2d1609de091d9162526711e6028"
+      url "https://github.com/StyraInc/regal/releases/download/v0.13.0/regal_Linux_arm64"
+      sha256 "982e81278386f35c1fe723ef5a452f6c87222d11cc39b00900b7c8a68a68bec7"
 
       def install
         bin.install "regal_Linux_arm64" => "regal"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/StyraInc/regal/releases/download/v0.13.0/regal_Linux_x86_64"
+      sha256 "ce2c60a1b5b8e5ee80485380beca334b12c9852f48ad7cfdea79223e7ee8527c"
+
+      def install
+        bin.install "regal_Linux_x86_64" => "regal"
       end
     end
   end
