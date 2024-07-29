@@ -5,20 +5,20 @@
 class Eopa < Formula
   desc "Styra Enterprise OPA is an enterprise-grade authorization engine built to provide resource-efficient performance for data-heavy workloads"
   homepage "https://www.styra.com/enterprise-opa"
-  version "1.23.0"
+  version "1.24.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.23.0/eopa_Darwin_x86_64"
-      sha256 "faa42314ca2b1ff0a9603b8f4d6a68026b5a0829b89f0efd85f08afc6ae05f4a"
+      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.24.0/eopa_Darwin_x86_64"
+      sha256 "870fcccd696e5e3eec5365a4388c38a10102b6ae8abc91a9c84ce3af3db4d55d"
 
       def install
         bin.install "eopa_Darwin_x86_64" => "eopa"
       end
     end
     on_arm do
-      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.23.0/eopa_Darwin_arm64"
-      sha256 "37b6e078c65aa02c98114189e08f95ad6c598928006bdf4100fe7489a9516731"
+      url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.24.0/eopa_Darwin_arm64"
+      sha256 "60538e90f87b41cd05f5f826940e1ea42c58222b32b5dfa186117de054434ff2"
 
       def install
         bin.install "eopa_Darwin_arm64" => "eopa"
@@ -29,8 +29,8 @@ class Eopa < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.23.0/eopa_Linux_x86_64"
-        sha256 "eed0de7c6feef8930a63cf995c85d27f65286769ae5f0c8ac3e15873929f7dd7"
+        url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.24.0/eopa_Linux_x86_64"
+        sha256 "fb2903fdfd00296b636c1e563d6e16b607b69638f14e6a2b20b9ec70ce53f4da"
 
         def install
           bin.install "eopa_Linux_x86_64" => "eopa"
@@ -39,8 +39,8 @@ class Eopa < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.23.0/eopa_Linux_arm64"
-        sha256 "ef2929505881803eb6579b6e9bcca27e545a4a06daa6805aa885915dabb9614c"
+        url "https://github.com/StyraInc/enterprise-opa/releases/download/v1.24.0/eopa_Linux_arm64"
+        sha256 "eb86e44c16e61b7bbae9bb6edb0cf5aa6f281dd53487fd5d48e872e8faef69c1"
 
         def install
           bin.install "eopa_Linux_arm64" => "eopa"
