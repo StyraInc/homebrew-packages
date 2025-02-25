@@ -5,20 +5,20 @@
 class Regal < Formula
   desc "Regal is a linter for Rego, with the goal of making your Rego magnificent!"
   homepage "https://github.com/styrainc/regal"
-  version "0.31.0"
+  version "0.31.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/StyraInc/regal/releases/download/v0.31.0/regal_Darwin_x86_64"
-      sha256 "28b072fafb97a2ded32285af11b5dd630d2fb56ba2f768caa3ac1d4f6fe88bb3"
+      url "https://github.com/StyraInc/regal/releases/download/v0.31.1/regal_Darwin_x86_64"
+      sha256 "936d98a24c8407349815acbc3e6041de8e4c9e6e8f8fba9283f10a8b7043de40"
 
       def install
         bin.install "regal_Darwin_x86_64" => "regal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/StyraInc/regal/releases/download/v0.31.0/regal_Darwin_arm64"
-      sha256 "94fc7e317934dc407a75560929cf7d723c8e032a8bfce2ade7019c71f2aa07bb"
+      url "https://github.com/StyraInc/regal/releases/download/v0.31.1/regal_Darwin_arm64"
+      sha256 "f840a0f890bc67df1ef94997d468d9b1318e232d7e4c62cd966f0bf91b996d1b"
 
       def install
         bin.install "regal_Darwin_arm64" => "regal"
@@ -29,8 +29,8 @@ class Regal < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/StyraInc/regal/releases/download/v0.31.0/regal_Linux_x86_64"
-        sha256 "76959391d89fa1e998b8e58b1a75c12d5710137fc0c662958a86470f5dadfdc1"
+        url "https://github.com/StyraInc/regal/releases/download/v0.31.1/regal_Linux_x86_64"
+        sha256 "9a8ad85801fd12a545cb8628d0d7e9ae8ee2308f03b38e5861d54347e89178ba"
 
         def install
           bin.install "regal_Linux_x86_64" => "regal"
@@ -39,8 +39,8 @@ class Regal < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/StyraInc/regal/releases/download/v0.31.0/regal_Linux_arm64"
-        sha256 "b717703c0cb590b9a346ff1bf8ffdcf9efa72d4497adf3c65a119028b002de08"
+        url "https://github.com/StyraInc/regal/releases/download/v0.31.1/regal_Linux_arm64"
+        sha256 "716bfb62887e04dec2f6e41758e531ecfb04d8c7091bcd991bc7c65dfdb20bd3"
 
         def install
           bin.install "regal_Linux_arm64" => "regal"
